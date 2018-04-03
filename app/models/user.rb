@@ -7,4 +7,5 @@ class User < ApplicationRecord
 	validate :phone, length: { in: 9 .. 12 }
 	validate :password, length: { in: 8 .. 12 }
 	validate :password, format: { with: /\A[a-zA-Z0-9\s]+\z/i, message: "can only contain letters and numbers." }
+
 end
